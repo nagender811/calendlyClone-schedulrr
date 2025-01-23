@@ -6,7 +6,7 @@ CREATE TABLE "User" (
     "id" TEXT NOT NULL,
     "clerkUserId" TEXT NOT NULL,
     "email" TEXT NOT NULL,
-    "userName" TEXT NOT NULL,
+    "username" TEXT,
     "name" TEXT,
     "imageUrl" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -37,7 +37,7 @@ CREATE TABLE "Booking" (
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "additionalInfo" TEXT,
-    "starTime" TIMESTAMP(3) NOT NULL,
+    "startTime" TIMESTAMP(3) NOT NULL,
     "endTime" TIMESTAMP(3) NOT NULL,
     "meetLink" TEXT NOT NULL,
     "googleEventId" TEXT NOT NULL,
@@ -53,7 +53,7 @@ CREATE TABLE "Availability" (
     "userId" TEXT NOT NULL,
     "timeGap" INTEGER NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updateAt" TIMESTAMP(3) NOT NULL,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "Availability_pkey" PRIMARY KEY ("id")
 );
@@ -76,7 +76,7 @@ CREATE UNIQUE INDEX "User_clerkUserId_key" ON "User"("clerkUserId");
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "User_userName_key" ON "User"("userName");
+CREATE UNIQUE INDEX "User_username_key" ON "User"("username");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "Availability_userId_key" ON "Availability"("userId");
