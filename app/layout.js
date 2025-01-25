@@ -4,7 +4,7 @@ import Header from "@/components/header";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata = {
-  title: "Schedulrr",
+  title: "Sc0hedulrr",
   description: "Free Online Appointment App",
 };
 
