@@ -19,6 +19,7 @@ const useFetch = (cb) => {
       setLoading(false);
     }
   };
+
   return { data, loading, error, fn };
 };
 
